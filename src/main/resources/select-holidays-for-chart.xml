@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="sql-query">
+        SELECT strftime('%m', date) AS month,
+        (SELECT COUNT(*) FROM HOLIDAYS AS h2 WHERE h2.country = 'Italia' AND strftime('%m', h2.date) = strftime('%m', h1.date)) AS first_count,
+        (SELECT COUNT(*) FROM HOLIDAYS AS h2 WHERE h2.country = 'Moldavia' AND strftime('%m', h2.date) = strftime('%m', h1.date)) AS second_count
+        FROM HOLIDAYS AS h1
+        GROUP BY month
+    </entry>
+</properties>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="sql-query">
+        SELECT strftime('%m', date) as month, country, name from holidays
+    </entry>
+</properties>

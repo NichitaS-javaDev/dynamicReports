@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="sql-query">
+        SELECT strftime('%Y-%m-%d', date) as date, * FROM HOLIDAYS
+    </entry>
+</properties>
